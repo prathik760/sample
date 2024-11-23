@@ -1,0 +1,291 @@
+ 
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+}
+
+.app {
+  position: relative;
+}
+
+.logo img {
+  height: 40px; 
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  margin-right: 100px;
+}
+
+ 
+.nav-icons .icon {
+  margin-left: 15px;
+  cursor: pointer;
+  font-size: 1.2rem; 
+  color: white; 
+  transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+ 
+.nav-icons .icon:hover {
+  color: #ffffff;  
+  transform: scale(1.2); 
+}
+
+ 
+.nav-links a:hover {
+  text-decoration: underline;
+  color: #131212;
+  transform: scale(1.1); 
+  transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+ 
+.mySwiper {
+  margin-top: 100px; 
+  height: calc(110vh - 80px); 
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+ 
+.hero-content {
+  text-align: center;
+  z-index: 2;
+  color: #fff;
+  opacity: 0;  
+  transform: translateY(100px); 
+  animation: fadeInUp 4s ease-out forwards;
+}
+ 
+ 
+
+ 
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+  font-family: Georgia, 'Times New Roman', Times;
+}
+
+.nav-links a {
+  color: #1f1e1e;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px 15px;
+  transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+.nav-links a:hover {
+  color: #131212;
+  text-decoration: none;
+  transform: scale(1.1); 
+}
+
+ 
+.nav-item {
+  position: relative;
+}
+
+.nav-item:hover .dropdown {
+  display: flex; 
+  animation: dropdownFadeIn 0.3s ease-out; 
+}
+
+/* Dropdown Menu */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  width: auto;  
+  box-shadow: none;
+  z-index: 100;
+  padding: 10px 20px; 
+  margin-top: 10px;  
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for visibility */
+}
+ 
+.nav-item:hover .dropdown {
+  display: flex; 
+  opacity: 1;
+  transform: translateY(0); 
+}
+
+ 
+.dropdown-column {
+  flex: 1;
+  min-width: 150px;
+  opacity: 0;
+  animation: fadeIn 0.3s ease-out forwards; 
+}
+
+.dropdown-column h4 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: rgb(114, 113, 113);
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.dropdown-column a {
+  display: block;
+  color: #c0bebe;
+  text-decoration: none;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.dropdown-column a:hover {
+  color: #bfbdbd;
+  text-decoration: none;
+}
+ 
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 20px;
+  z-index: 1000; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #cfcece;
+}
+
+.nav-icons .icon {
+  font-size: 1.2rem;  
+  color: white; 
+}
+
+.mySwiper {
+  margin-top: 0; 
+}
+
+.slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  height: 100vh; 
+  position: relative;
+  background-color: #000; 
+}
+
+.hero-content {
+  z-index: 1; 
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.purchase-button {  
+  padding: 10px 30px;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.purchase-button:hover {
+  background-color: #ffffff;
+  transform: scale(1.05);  
+}
+ 
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden; 
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+}
+
+.sh1 {
+  text-transform: uppercase;
+  font-size: 500px;
+  font-weight: lighter;
+}
+
+.sp {
+  font-size: 100px;
+  font-style: italic;
+}
+ 
+@keyframes dropdownFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); 
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+}
